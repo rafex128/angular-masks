@@ -1,0 +1,23 @@
+{
+  "name": "angular-masks",
+  "description": "Simple, but effective masks.",
+  "main": "index.js",
+  "authors": [
+    "Marcelo Barreto <marcelo@matilhaestud.io>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "masks",
+    "angular",
+    "mask",
+    "input"
+  ],
+  "homepage": "https://github.com/matilhaestudio/angular-masks",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
