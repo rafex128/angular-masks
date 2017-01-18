@@ -1,0 +1,25 @@
+{
+  "name": "angular-masks",
+  "version": "1.0.0",
+  "description": "Simple, but effective masks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matilhaestudio/angular-masks.git"
+  },
+  "keywords": [
+    "masks",
+    "angular",
+    "mask",
+    "input"
+  ],
+  "author": "Marcelo Barreto <marcelo@matilhaestud.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matilhaestudio/angular-masks/issues"
+  },
+  "homepage": "https://github.com/matilhaestudio/angular-masks#readme"
+}
