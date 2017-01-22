@@ -8,7 +8,6 @@
       'ngMasks'
     ]);
 		angular.module("app").controller("AppCtrl", function ($scope) {
-			$scope.cep = '28080-480'
 		});
 	</script>
 </head>
@@ -18,7 +17,7 @@
 			<input type="tel" placeholder="00000-000" ng-model="cep" ng-mask ng-mask-pattern="00000-000" />
 		</div>
 
-		<div>
+		<!-- <div>
 			<input type="tel" placeholder="111.111.111-11" ng-model="cpf" ng-mask ng-mask-pattern="111.111.111-11" ng-mask-clean="false" />
 		</div>
 
@@ -28,7 +27,7 @@
 
 		<div>
 			<input type="tel" placeholder="(12) 99999-9999" ng-model="telefone" ng-mask />
-		</div>
+		</div> -->
 	</div>
 
 	<style>
