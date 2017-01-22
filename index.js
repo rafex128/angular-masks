@@ -1,12 +1,12 @@
-console.log('Angular Masks mounted')
-
 angular
-  .module('ng-masks', [])
+  .module('ngMasks', [])
   .directive('ngMask', function () {
     return {
       require: 'ngModel',
-      scope: {
+      scope:{
+        ngModel: '='
       },
+      restrict: 'A',
       link: function(scope, element, attrs, ctrl) {
         function _getCharType(char) {
           if(char.match(/\d/)) {
@@ -46,10 +46,9 @@ angular
             ctrl.$setViewValue(_format(''));
             ctrl.$render();
           };
-        }
+        };
 
-        if(attrs.ngMaskPattern) {
-          var pattern = attrs.ngMaskPattern
+        function _splitPattern(pattern) {
           charArray = []
 
           angular.forEach(pattern, function(char, index) {
@@ -57,9 +56,16 @@ angular
             var charObject = {char: char, position: index, type: type}
             this.push(charObject)
           }, charArray);
+        };
+
+        if(attrs.ngMaskPattern) {
+          _splitPattern(attrs.ngMaskPattern)
+        } else if(attrs.placeholder) {
+          console.log('ng-mask is using placeholder as pattern')
+          _splitPattern(attrs.placeholder)
         } else {
-          console.warn('ng-mask-pattern param was forgotten')
-        }
+          console.warn('ng-mask-pattern param or placeholder was forgotten')
+        };
 
         element.bind("keyup", function() {
           ctrl.$setViewValue(_format(ctrl.$viewValue));
