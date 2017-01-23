@@ -26,5 +26,8 @@
     "src/",
     "index.js",
     "README.md"
-  ]
+  ],
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
 }
