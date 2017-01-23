@@ -21,17 +21,17 @@ angular
         function _format(input) {
           if(!input) return
 
-          var charAt = charArray[input.length - 1]
+          var charAt = scope.charArray[input.length - 1]
           var type = _getCharType(input.substring(input.length - 1))
-          if(input.length > charArray.length) {
-            return input.substring(0, charArray.length)
+          if(input.length > scope.charArray.length) {
+            return input.substring(0, scope.charArray.length)
           } else {
-            if(charArray[input.length - 1]['type'] == type) {
+            if(scope.charArray[input.length - 1]['type'] == type) {
               return input
-            } else if(charArray[input.length - 1]['type'] == 'specialChar') {
-              input = input.substring(0, charArray[input.length - 1]['position']) +
-                        charArray[input.length - 1]['char'] +
-                        input.substring(charArray[input.length - 1]['position'], input.length)
+            } else if(scope.charArray[input.length - 1]['type'] == 'specialChar') {
+              input = input.substring(0, scope.charArray[input.length - 1]['position']) +
+                        scope.charArray[input.length - 1]['char'] +
+                        input.substring(scope.charArray[input.length - 1]['position'], input.length)
               return input
             } else {
               var lastChar = input.length - 1
@@ -49,13 +49,13 @@ angular
         };
 
         function _splitPattern(pattern) {
-          charArray = []
+          scope.charArray = []
 
           angular.forEach(pattern, function(char, index) {
             var type = _getCharType(char)
             var charObject = {char: char, position: index, type: type}
             this.push(charObject)
-          }, charArray);
+          }, scope.charArray);
         };
 
         if(attrs.ngMaskPattern) {
