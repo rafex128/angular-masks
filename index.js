@@ -73,7 +73,7 @@ angular
         });
 
         element.bind("keydown", function(e) {
-          if(e.keyCode == 8 && attrs.ngMaskClean != 'false') {
+          if(e.keyCode == 8 && attrs.ngMaskClean == 'true') {
             ctrl.$setViewValue(_format(''));
             ctrl.$render();
           } else {

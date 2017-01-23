@@ -1,42 +1,42 @@
 <html ng-app="app">
-<head>
-	<title>Hello World</title>
-	<script src="angular.js"></script>
-  <script src="../index.js"></script>
-	<script>
-		angular.module("app", [
-      'ngMasks'
-    ]);
-		angular.module("app").controller("AppCtrl", function ($scope) {
-		});
-	</script>
-</head>
-<body ng-controller="AppCtrl as $ctrl">
-	<div>
-		<div>
-			<input type="tel" placeholder="00000-000" ng-model="cep" ng-mask ng-mask-pattern="00000-000" />
-		</div>
+	<head>
+	  <title>Angular Masks Demo</title>
+	  <script src="angular.js"></script>
+	  <script src="../index.js"></script>
+	  <script>
+	    angular.module("app", [
+	      'ngMasks'
+	    ]);
+	    angular.module("app").controller("AppCtrl", function ($scope) {
+	    });
+	  </script>
+	</head>
+	<body ng-controller="AppCtrl as $ctrl">
+	  <div>
+	    <div>
+	      <input type="tel" placeholder="00000-000" ng-model="cep" ng-mask ng-mask-pattern="00000-000" />
+	    </div>
 
-		<!-- <div>
-			<input type="tel" placeholder="111.111.111-11" ng-model="cpf" ng-mask ng-mask-pattern="111.111.111-11" ng-mask-clean="false" />
-		</div>
+	    <div>
+	      <input type="tel" placeholder="111.111.111-11" ng-model="cpf" ng-mask ng-mask-pattern="111.111.111-11" ng-mask-clean="true" />
+	    </div>
 
-		<div>
-			<input type="tel" placeholder="0000-0000-0000-0000" ng-model="cartao" ng-mask ng-mask-pattern="0000-0000-0000-0000" />
-		</div>
+	    <div>
+	      <input type="tel" placeholder="0000-0000-0000-0000" class="valid" ng-model="cartao" ng-mask ng-mask-pattern="0000-0000-0000-0000" />
+	    </div>
 
-		<div>
-			<input type="tel" placeholder="(12) 99999-9999" ng-model="telefone" ng-mask />
-		</div> -->
-	</div>
+	    <div>
+	      <input type="tel" placeholder="(12) 99999-9999" ng-model="telefone" ng-mask />
+	    </div>
+	  </div>
 
-	<style>
-		input {
-			width: 400px;
-			height: 100px;
-			font-size: 30px;
-			margin: 5px 0;
-		}
-	</style>
-</body>
+	  <style>
+	    input {
+	      width: 400px;
+	      height: 100px;
+	      font-size: 30px;
+	      margin: 5px 0;
+	    }
+	  </style>
+	</body>
 </html>
